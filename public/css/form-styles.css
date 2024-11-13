@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    background-color: #afcbaf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;  
+    background-image: url('../images/forest.jpg'); 
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin: 0;
+}
+
+h1 {
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    color: #2e8b57;
+    margin-bottom: 40px;
+}
+
+.container {
+    padding: 40px;
+    margin-top: 40px;
+    width: 90%;
+    max-width: 900px;
+    border: 2px solid #2e8b57;
+    border-radius: 5px;
+    background-color: #e1ede1c2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+form {
+    width: 80%;
+    max-width: 600px;
+}
+
+.accordion {
+    border: 2px solid #2e8b57;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    /*#2e8b57*/
+    background-color: #45c77d;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+    font-family: "Questrial", sans-serif;
+}
+
+.accordion-content {
+    display: none; 
+    padding: 15px;
+    background-color: #ffffff;
+    color: #2f4f4f;
+}
+.accordion-content label .textCheckbox{
+    font-weight:100;
+}
+.accordion-content label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #b0c4de;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;    
+}
+
+.textCheckbox{
+    font-weight:100 !important; 
+    margin-top: 15px !important;
+}
+
+.accordion-header:hover {
+    background-color: #3cb371;
+}
+
+input[type="submit"] {
+    background-color: #2e8b57; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+input[type="submit"]:hover {
+    background-color: #3cb371; 
+    transform: scale(1.05); 
+}
+
+input[type="submit"]:active {
+    background-color: #2e8b57; 
+    transform: scale(0.95); 
+}

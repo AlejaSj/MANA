@@ -1,6 +1,6 @@
 <?php
 define("DB_HOST", "localhost");
-define("DB_NAME", "contact_messages");
+define("DB_NAME", "mana");
 define("DB_USER", "root");
 define("DB_PASS", "PkU3qJ35jr(4/r-V");
 

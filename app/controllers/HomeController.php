@@ -1,13 +1,15 @@
 <?php
 require_once __DIR__ . '/../models/EnvironmentalTips.php';
+require_once __DIR__ . '/../models/FormModel.php';
 require_once __DIR__ . '/../../config/config.php';
 
 class HomeController {
     public function showLandingPage() {
-        require '../app/views/home.php';
+        require_once __DIR__ . '/../../app/views/home.php';
     }
 
     public function getEnvironmentalTips() {
+
         header('Content-Type: application/json');
         $tips = [
             "Reduce el uso de plásticos.",
@@ -18,34 +20,44 @@ class HomeController {
         echo json_encode(['tips' => $tips]);
     }
 
-    public function submitForm() {
+    public function submitForm() {  
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $name = $_POST['name'];
-            $email = $_POST['email'];
-            $message = $_POST['message'];
+            $formData = [
+                'nombre' => $_POST['nombre'],
+                'edad' => $_POST['edad'],
+                'profesion' => $_POST['profesion'],
+                'correo' => $_POST['correo'],
+                'frecuencia' => $_POST['frecuencia'],
+                'actividades' => $_POST['actividades'],
+                'importancia' => $_POST['importancia'],
+                'acciones' => isset($_POST['acciones']) ? (is_array($_POST['acciones']) ? $_POST['acciones'] : [$_POST['acciones']]) : [],
+                'voluntariado' => $_POST['voluntariado'],
+                'arboles' => $_POST['arboles'],
+                'horas' => $_POST['horas'],
+                'areas' => isset($_POST['areas']) ? (is_array($_POST['areas']) ? $_POST['areas'] : [$_POST['areas']]) : [],
+                'conocimiento' => $_POST['conocimiento'],
+                'aprender' => $_POST['aprender'],
+                'informacion' => $_POST['informacion'],
+                'objetivos' => $_POST['objetivos'],
+                'cambios' => $_POST['cambios'],
+                'mejorar' => $_POST['mejorar'],
+                'comentarios' => $_POST['comentarios']
+            ];
 
-            try {
-                // Inserta los datos en la base de datos
-                $conn = getDBConnection();
-                $stmt = $conn->prepare("INSERT INTO contact_messages (name, email, message) VALUES (:name, :email, :message)");
-                $stmt->bindParam(':name', $name);
-                $stmt->bindParam(':email', $email);
-                $stmt->bindParam(':message', $message);
-                $stmt->execute();
-
-                // Redirige al usuario con un mensaje de éxito
+            $model = new FormModel();
+            if ($model->saveFormData($formData)) {
                 header("Location: /MANA/public/form.html?status=success");
-                exit;
-            } catch (PDOException $e) {
-                // Maneja cualquier error en la base de datos
+            } else {
                 header("Location: /MANA/public/form.html?status=error");
-                exit;
             }
+            exit;
+            
+
         } else {
-            // Si el método no es POST, muestra un error 405
-            http_response_code(405); // Método no permitido
+            http_response_code(405);
             echo "Método no permitido";
         }
     }
+    
 }
 ?>
