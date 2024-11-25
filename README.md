@@ -1,5 +1,6 @@
 # 🌍 Proyecto de Vida y Ecosistema Terrestre
 Modificación del README para probar la edicion
+Modificación hecha por Miri
 Equipo:**MANA**
 
 **Elaborada por:**
