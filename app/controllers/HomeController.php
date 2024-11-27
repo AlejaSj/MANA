@@ -40,9 +40,9 @@ class HomeController {
 
             $model = new FormModel();
             if ($model->saveFormData($formData)) {
-                header("Location: /MANA/public/form.html?status=success");
+                header("Location: /MANA/public/layout/pages/form.html?status=success");
             } else {
-                header("Location: /MANA/public/form.html?status=error");
+                header("Location: /MANA/public/layout/pages/form.html?status=error");
             }
             exit;
             
