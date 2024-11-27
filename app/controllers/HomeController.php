@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../models/EnvironmentalTips.php';
 require_once __DIR__ . '/../models/FormModel.php';
-require_once __DIR__ . '/../../config/config.php';
+require_once __DIR__ . '/../../config/conexionBD.php';
 
 class HomeController {
     public function showLandingPage() {
@@ -9,7 +9,7 @@ class HomeController {
     }
 
     public function getEnvironmentalTips() {
-
+        #FIXME: Quitar el array y traer directamente de EnvironmentalTips
         header('Content-Type: application/json');
         $tips = [
             "Reduce el uso de plásticos.",
