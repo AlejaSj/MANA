@@ -1,5 +1,4 @@
 <?php
-require_once __DIR__ . '/../models/EnvironmentalTips.php';
 require_once __DIR__ . '/../models/FormModel.php';
 require_once __DIR__ . '/../../config/conexionBD.php';
 
@@ -8,17 +7,12 @@ class HomeController {
         require_once __DIR__ . '/../../app/views/home.php';
     }
 
-    public function getEnvironmentalTips() {
-        #FIXME: Quitar el array y traer directamente de EnvironmentalTips
-        header('Content-Type: application/json');
-        $tips = [
-            "Reduce el uso de plásticos.",
-            "Recicla y reutiliza.",
-            "Planta árboles.",
-            "Ahorra agua."
-        ];
-        echo json_encode(['tips' => $tips]);
+    public function showFormPage() {
+        require_once __DIR__ . '/../../app/views/form.php';
     }
+
+
+
 
     public function submitForm() {  
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
