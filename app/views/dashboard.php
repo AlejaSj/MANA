@@ -67,9 +67,9 @@
             <li><a href="#">Level 2</a></li>
           </ul>
         </li> -->
-        <li><a href="#">Acerca de nosotros</a></li>
-        <li><a href="#">Contáctanos</a></li> 
-        <li><a href="#">Objetivo</a></li>
+        <li><a href="http://localhost/MANA/app/views/AboutUs.php">Acerca de nosotros</a></li>
+        <li><a href="/mana/#ContactUs">Contáctanos</a></li> 
+        <li><a href="/mana/#Objective">Objetivo</a></li>
         <li><a href="https://github.com/AlejaSj/MANA/">Repositorio</a></li>
         <li><a href="http://localhost/MANA/app/views/dashboard.php">Estadísticas</a></li>
       </ul>
