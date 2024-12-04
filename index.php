@@ -1,4 +1,5 @@
 <?php
+
 require 'vendor/autoload.php';
 require_once 'config/conexionBD.php';
 require_once __DIR__ . '/app/controllers/HomeController.php';
