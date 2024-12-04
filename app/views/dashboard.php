@@ -17,16 +17,16 @@
         }
         
         .titulo {
-        font-family: 'Poppins', sans-serif; /* Cambia a una fuente moderna */
-        font-size: 4.5rem; /* Tamaño grande para destacar */
-        color: #2c3e50; /* Un color oscuro elegante */
-        text-align: center; /* Centrado */
-        margin: 20px 0; /* Espaciado superior e inferior */
-        text-transform: uppercase; /* Texto en mayúsculas */
-        letter-spacing: 2px; /* Espaciado entre letras */
-        background: linear-gradient(90deg, #3498db, #9b59b6); /* Degrada    do en el texto */
-        -webkit-background-clip: text; /* Muestra solo el texto del degradado */
-        -webkit-text-fill-color: transparent; /* Hace el texto transparente excepto por el degradado */
+        font-family: 'Poppins', sans-serif; 
+        font-size: 4.5rem; 
+        color: #2c3e50; 
+        text-align: center; 
+        margin: 20px 0; 
+        text-transform: uppercase; 
+        letter-spacing: 2px; 
+        background: linear-gradient(90deg, #3498db, #9b59b6); 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
         }
     </style>
 
@@ -36,44 +36,21 @@
 <div class="wrapper row1">
   <header id="header" class="hoc clear">
     <div id="logo" class="fl_left"> 
-      <!-- ################################################################################################ -->
+      
       <h1 class="logoname"><a href="/MANA/app/views/home.php"><span>M</span><span>A</span><span>N</span><span>A</span></a></h1>
-      <!-- ################################################################################################ -->
+     
     </div>
     <nav id="mainav" class="fl_right"> 
-      <!-- ################################################################################################ -->
+      
       <ul class="clear">
         <li class="active"><a href="/mana/">Inicio</a></li>
-        <!-- <li><a class="drop" href="#">Pages</a>
-          <ul>
-            <li><a href="/MANA/public/layout/pages/gallery.html">Gallery</a></li>
-            <li><a href="/MANA/public/layout/pages/full-width.html">Full Width</a></li>
-            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
-            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
-            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
-            <li><a href="pages/font-icons.html">Font Icons</a></li>
-          </ul>
-        </li>
-        <li><a class="drop" href="#">Dropdown</a>
-          <ul>
-            <li><a href="#">Level 2</a></li>
-            <li><a class="drop" href="#">Level 2 + Drop</a>
-              <ul>
-                <li><a href="#">Level 3</a></li>
-                <li><a href="#">Level 3</a></li>
-                <li><a href="#">Level 3</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Level 2</a></li>
-          </ul>
-        </li> -->
         <li><a href="http://localhost/MANA/app/views/AboutUs.php">Acerca de nosotros</a></li>
         <li><a href="/mana/#ContactUs">Contáctanos</a></li> 
         <li><a href="/mana/#Objective">Objetivos</a></li>
         <li><a href="https://github.com/AlejaSj/MANA/">Repositorio</a></li>
         <li><a href="http://localhost/MANA/app/views/dashboard.php">Estadísticas</a></li>
       </ul>
-      <!-- ################################################################################################ -->
+     
     </nav>
   </header>
 </div>
@@ -87,7 +64,7 @@
     </p>
 
     <div class="row g-4">
-        <!-- Panel 1: Frecuencias -->
+        
         <div class="col-md-6">
             <div class="card shadow-sm">
                 <div class="card-body">
@@ -97,7 +74,7 @@
             </div>
         </div>
 
-          <!-- Panel 3: Importancia Promedio por Frecuencia (Full Width) -->
+          
           <div class="col-6">
             <div class="card shadow-sm">
                 <div class="card-body">
@@ -106,7 +83,7 @@
                 </div>
             </div>
         </div>
-        <!-- Panel 8: Horas vs. Árboles -->
+       
         <div class="col-6">
             <div class="card shadow-sm">
                 <div class="card-body">
@@ -119,7 +96,7 @@
 
         
 
-        <!-- Panel 4: Edad vs. Importancia (Full Width) -->
+       
         <div class="col-6">
             <div class="card shadow-sm">
                 <div class="card-body">
@@ -129,7 +106,7 @@
             </div>
         </div>
 
-        <!-- Panel 2: Voluntariado -->
+       
         <div class="col-md-6">
             <div class="card shadow-sm">
                 <div class="card-body">
@@ -139,7 +116,7 @@
             </div>
         </div>
 
-        <!-- Panel 2: Voluntariado -->
+
         <div class="col-md-6">
             <div class="card shadow-sm">
                 <div class="card-body m-5">
@@ -164,7 +141,7 @@
 </div>
 
 <script>
-    // Function to fetch and render data for each chart
+   
     function fetchDataAndRenderChart(type, chartId, chartType, labelsKey, dataKey, options = {}) {
         $.get(`http://localhost/MANA/app/models/fetch_data.php?type=${type}`, function(data) {
             const parsedData = JSON.parse(data);
@@ -186,7 +163,7 @@
         });
     }
 
-    // Render charts
+    
     fetchDataAndRenderChart('frecuencias', 'chartFrecuencias', 'bar', 'frecuencia', 'count');
     fetchDataAndRenderChart('voluntariado', 'chartVoluntariado', 'pie', 'voluntariado', 'count');
     fetchDataAndRenderChart('importancia', 'chartImportancia', 'line', 'frecuencia', 'promedio', { tension: 0.4 });
@@ -198,7 +175,7 @@
     });
 
     
-// Function to load and render the Horas vs. Árboles chart
+
 function loadHorasArbolesChart() {
     $.get('http://localhost/MANA/app/models/fetch_data.php?type=horas_arboles', function (data) {
         const parsedData = JSON.parse(data);
@@ -232,7 +209,7 @@ function loadHorasArbolesChart() {
     });
 }
 
-// Call the function to load the chart
+
 loadHorasArbolesChart();
 
 </script>
