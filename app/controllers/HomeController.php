@@ -3,16 +3,6 @@ require_once __DIR__ . '/../models/FormModel.php';
 require_once __DIR__ . '/../../config/conexionBD.php';
 
 class HomeController {
-    public function showLandingPage() {
-        require_once __DIR__ . '/../../app/views/home.php';
-    }
-
-    public function showFormPage() {
-        require_once __DIR__ . '/../../app/views/form.php';
-    }
-
-
-
 
     public function submitForm() {  
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
