@@ -1,11 +1,3 @@
--- Base de datos: `mana`
---
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `form_info`
---
 
 CREATE TABLE `form_info` (
   `id` int(11) NOT NULL,
@@ -33,10 +25,6 @@ CREATE TABLE `form_info` (
 
 ALTER TABLE `form_info`
   ADD PRIMARY KEY (`id`);
-
---
--- Volcado de datos para la tabla `form_info`
---
 
 INSERT INTO `form_info` (`id`, `nombre`, `edad`, `profesion`, `correo`, `frecuencia`, `actividades`, `importancia`, `acciones`, `voluntariado`, `arboles`, `horas`, `areas`, `conocimiento`, `aprender`, `informacion`, `objetivos`, `cambios`, `mejorar`, `comentarios`, `created_at`) VALUES
 (1, 'Luis Alberto', 34, 'Biólogo', 'luis.alberto@example.com', 'diariamente', 'Investigación, observación de flora', 10, '[\"reciclaje\", \"productos_ecologicos\", \"plantacion\"]', 'si', 50, 100, '[\"conservacion_bosques\", \"proteccion_especies\"]', 9, 'si', 'si', 'Promover proyectos de investigación sobre biodiversidad local.', 'Implementar educación ambiental obligatoria.', 'Gestión de áreas protegidas.', 'La conservación debe ser prioridad en las políticas locales.', '2024-11-13 01:53:28'),
