@@ -10,9 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/form-styles.css">
+    <link rel="stylesheet" href="/MANA/public/layout/styles/form/form-styles.css">
 
-    
 </head>
 <body>
 <div class="container">
@@ -28,6 +27,7 @@
 </script>
 <form  id="contactForm" action="/MANA/api/submitForm" method="POST">
     <div class="accordion">
+    <div class="accordion-item">
         <legend class="accordion-header">Información Personal Básica</legend>
         <div class="accordion-content">
             <label for="nombre">Nombre Completo:</label>
@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    <div class="accordion">
+    <div class="accordion-item">
         <legend class="accordion-header">Conexión Personal con la Naturaleza</legend>
         <div class="accordion-content">
             <label for="frecuencia">¿Con qué frecuencia visitas áreas naturales?</label>
@@ -64,7 +64,7 @@
         </div>
     </div>
 
-    <div class="accordion">
+    <div class="accordion-item">
         <legend class="accordion-header">Acciones Personales para Proteger los Ecosistemas</legend>
         <div class="accordion-content">
             <label>¿Realizas alguna acción de conservación ambiental en tu vida diaria?</label>
@@ -89,7 +89,7 @@
         </div>
     </div>
     
-    <div class="accordion">
+    <div class="accordion-item">
         <legend class="accordion-header">Impacto y Contribución Personal</legend>
         <div class="accordion-content">
             <label for="arboles">Número de árboles o plantas que has plantado este año:</label>
@@ -112,7 +112,7 @@
         </div>
     </div>
 
-    <div class="accordion">
+    <div class="accordion-item">
         <legend class="accordion-header">Conocimiento y Educación Ambiental</legend>
         <div class="accordion-content">
             <label for="conocimiento">¿Cuánto conoces sobre la biodiversidad en tu área? (1-10):</label>
@@ -136,7 +136,7 @@
         </div>
     </div>
 
-    <div class="accordion">
+    <div class="accordion-item">
         <legend class="accordion-header">Metas Personales para el Futuro</legend>
         <div class="accordion-content">
             <label for="objetivos">¿Tienes algún objetivo personal para contribuir a la sostenibilidad en el próximo año?</label><br>
@@ -153,10 +153,11 @@
 
     </div>
 </div>
+</div>
 <input type="submit" value="Enviar">
 </form>
 </div>
 
-<script src="js/form-script.js"></script>
+<script src="/MANA/public/layout/scripts/form/form-script.js"></script>
 </body>
 </html>

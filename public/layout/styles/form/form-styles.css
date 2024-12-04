@@ -13,7 +13,7 @@ body {
     align-items: center;
     min-height: 100vh;
     flex-direction: column;  
-    background-image: url('../images/forest.jpg'); 
+    background-image: url('../../../images/form/forest.jpg'); 
     background-size: cover; 
     background-attachment: fixed;
     background-position: center; 
@@ -55,7 +55,7 @@ form {
 
 .accordion-header {
     /*#2e8b57*/
-    background-color: #45c77d;
+    background-color: #3eb672e4;
     color: white;
     padding: 15px;
     cursor: pointer;
@@ -63,12 +63,16 @@ form {
     user-select: none;
     font-family: "Questrial", sans-serif;
 }
-
 .accordion-content {
-    display: none; 
-    padding: 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 15px;
     background-color: #ffffff;
     color: #2f4f4f;
+}
+.accordion-item.active .accordion-content {
+    max-height: 800px; /* Ajusta según el contenido */
 }
 .accordion-content label .textCheckbox{
     font-weight:100;
@@ -101,7 +105,7 @@ select {
 }
 
 input[type="submit"] {
-    background-color: #2e8b57; 
+    background-color: #2e8b57; /* Color verde */
     color: #ffffff; 
     border: none;
     border-radius: 5px;
