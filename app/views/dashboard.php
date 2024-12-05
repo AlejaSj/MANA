@@ -68,7 +68,7 @@
         <div class="col-md-6">
             <div class="card shadow-sm">
                 <div class="card-body">
-                    <h5 class="card-title">Frecuencia que realizan actividades ecologicas</h5>
+                    <h5 class="card-title">Frecuencia que realizan actividades ecológicas</h5>
                     <canvas id="chartFrecuencias"></canvas>
                 </div>
             </div>
