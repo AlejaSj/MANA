@@ -56,7 +56,7 @@
 </div>
 
 <div class="container">
-    <h1 class="titulo text-center mb-4">Tabla de dashboard </h1>
+    <h1 class="titulo text-center mb-4">Dashboard </h1>
     <p class="text-center">
         Este dashboard presenta una serie de gráficos interactivos basados en los datos extraídos de la base de datos.
         Utiliza tecnologías modernas como Chart.js y Bootstrap para la visualización y diseño responsivo. Explora los
@@ -68,7 +68,7 @@
         <div class="col-md-6">
             <div class="card shadow-sm">
                 <div class="card-body">
-                    <h5 class="card-title">Frecuencia que realizan actividades ecologicas</h5>
+                    <h5 class="card-title">Frecuencia que realizan actividades ecológicas</h5>
                     <canvas id="chartFrecuencias"></canvas>
                 </div>
             </div>
