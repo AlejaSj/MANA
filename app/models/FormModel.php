@@ -8,7 +8,6 @@ class FormModel {
 
     public function saveFormData($data) {
         try {
-            // Convertimos los arrays a strings para la base de datos
             $data['acciones'] = implode(',', $data['acciones']);
             $data['areas'] = implode(',', $data['areas']);
 
